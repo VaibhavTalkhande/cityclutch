@@ -19,12 +19,22 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // Prevent scroll when mobile menu is open
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden";
+      document.body.style.touchAction = "none"; // Prevent mobile scroll
+    } else {
+      document.body.style.overflow = "auto";
+      document.body.style.touchAction = "auto";
+    }
+  }, [open]);
+
   const closeMenu = () => {
     setOpen(false);
     setIsMobileProductsOpen(false);
   };
 
-  // Dropdown categories (you can adjust these)
   const productCategories = [
     { name: "CityClutch iMT", href: "#features" },
     { name: "Accessories", href: "#gallery" },
@@ -36,8 +46,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <a href="#home" className="flex items-center gap-2">
-          <img src={logo} alt="4TEL’S Logo" className="h-10 " />
-          
+          <img src={logo} alt="4TEL’S Logo" className="h-10" />
         </a>
 
         {/* Desktop Menu */}
@@ -89,29 +98,28 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu (Full Screen, Scroll Locked) */}
       <div
-        className={`fixed inset-0 bg-black/95 backdrop-blur-lg text-gray-200 z-40 transform transition-transform duration-300 ${
-          open ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 left-0 w-full h-screen bg-black/95 backdrop-blur-lg text-gray-200 z-40 transform transition-transform duration-500 ease-in-out ${
+          open ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
         } md:hidden`}
       >
         {/* Top Bar */}
         <div className="flex justify-between items-center p-5 border-b border-gray-800">
           <div className="flex items-center gap-2">
-            <img src={logo} alt="Logo" className="h-10 w-10 rounded-full border border-yellow-500/30" />
-            <span className="text-yellow-500 font-semibold text-lg">4TEL’S Automation</span>
+            <img src={logo} alt="Logo" className="h-10" />
           </div>
           <button onClick={closeMenu}>
             <X className="w-7 h-7 text-gray-300" />
           </button>
         </div>
 
-        {/* Mobile Nav Links */}
-        <div className="flex flex-col gap-4 p-6 text-lg font-medium">
+        {/* Menu Content */}
+        <div className="flex flex-col gap-6 p-8 text-lg font-medium h-[calc(100vh-80px)] overflow-y-auto">
           <a href="#home" onClick={closeMenu} className="hover:text-yellow-400">Home</a>
           <a href="#features" onClick={closeMenu} className="hover:text-yellow-400">Features</a>
 
-          {/* Accordion for Products */}
+          {/* Products Accordion */}
           <div>
             <button
               onClick={() => setIsMobileProductsOpen(!isMobileProductsOpen)}
@@ -146,7 +154,7 @@ export default function Navbar() {
           <a href="#contact" onClick={closeMenu} className="hover:text-yellow-400">Contact</a>
 
           {/* Footer Text */}
-          <div className="mt-10 text-center text-gray-500 text-sm">
+          <div className="mt-auto text-center text-gray-500 text-sm">
             <p>© {new Date().getFullYear()} 4TEL’S Automation</p>
             <p className="text-yellow-500 mt-1">Drive Smarter, Live Smarter ⚙️</p>
           </div>
