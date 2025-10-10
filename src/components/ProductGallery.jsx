@@ -29,7 +29,7 @@ export default function ProductGallery() {
         className="relative z-10 text-center mb-16"
       >
         <h2 className="text-4xl md:text-5xl font-extrabold text-yellow-500 mb-4">
-          Product Gallery
+          Our Projects
         </h2>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
           A closer look at the innovation behind{" "}

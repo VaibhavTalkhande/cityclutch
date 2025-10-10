@@ -85,10 +85,10 @@ const Footer = () => {
             © {new Date().getFullYear()} <span className="font-semibold text-yellow-500">4TEL’S Automation</span>. All rights reserved.
           </p>
 
-          <div className="flex gap-5">
+          {/* <div className="flex gap-5">
             <a href="#terms" className="hover:text-yellow-400 transition-colors">Terms & Conditions</a>
             <a href="#privacy" className="hover:text-yellow-400 transition-colors">Privacy Policy</a>
-          </div>
+          </div> */}
 
           <div>
             Made with ❤️ by <span className="text-yellow-500 font-semibold">QuickFusion Innovations</span>

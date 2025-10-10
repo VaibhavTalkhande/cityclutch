@@ -37,7 +37,6 @@ export default function Navbar() {
 
   const productCategories = [
     { name: "CityClutch iMT", href: "#features" },
-    { name: "Accessories", href: "#gallery" },
     { name: "Installation Kit", href: "#installation" },
   ];
 
@@ -60,7 +59,7 @@ export default function Navbar() {
               onClick={() => setIsProductsOpen(!isProductsOpen)}
               className="flex items-center gap-1 hover:text-yellow-400 transition"
             >
-              Products
+              CityClutch
               <ChevronDown
                 className={`w-4 h-4 transition-transform ${
                   isProductsOpen ? "rotate-180 text-yellow-400" : ""
@@ -84,7 +83,7 @@ export default function Navbar() {
             )}
           </div>
 
-          <a href="#gallery" className="hover:text-yellow-400 transition">Gallery</a>
+          <a href="#projects" className="hover:text-yellow-400 transition">Our Projects</a>
           <a href="#installation" className="hover:text-yellow-400 transition">Installation</a>
           <a href="#contact" className="hover:text-yellow-400 transition">Contact</a>
         </div>
@@ -125,7 +124,7 @@ export default function Navbar() {
               onClick={() => setIsMobileProductsOpen(!isMobileProductsOpen)}
               className="flex items-center justify-between w-full hover:text-yellow-400"
             >
-              Products
+              CityClutch
               <ChevronDown
                 className={`w-5 h-5 transition-transform ${
                   isMobileProductsOpen ? "rotate-180 text-yellow-400" : ""
@@ -149,7 +148,7 @@ export default function Navbar() {
             )}
           </div>
 
-          <a href="#gallery" onClick={closeMenu} className="hover:text-yellow-400">Gallery</a>
+          <a href="#projects" onClick={closeMenu} className="hover:text-yellow-400">Our Projects</a>
           <a href="#installation" onClick={closeMenu} className="hover:text-yellow-400">Installation</a>
           <a href="#contact" onClick={closeMenu} className="hover:text-yellow-400">Contact</a>
 
