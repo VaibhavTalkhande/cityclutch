@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import heroImage from "../assets/logo3.jpeg";
+import heroImage from "../assets/hero.jpeg";
 
 export default function Hero() {
   // Parallax scroll effect for the image and glow
