@@ -1,14 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
-import p1 from "../assets/logo3.jpeg";
-import p2 from "../assets/logo3.jpeg";
-import p3 from "../assets/logo3.jpeg";
+import p1 from "../assets/product.jpeg";
+// import p2 from "../assets/logo3.jpeg";
+// import p3 from "../assets/logo3.jpeg";
 
 export default function ProductGallery() {
   const products = [
     { src: p1, title: "CityClutch – Intelligent Drive System" },
-    { src: p2, title: "Clutch Sensor Integration Unit" },
-    { src: p3, title: "Auto Clutch Control Module" },
+    // { src: p2, title: "Clutch Sensor Integration Unit" },
+    // { src: p3, title: "Auto Clutch Control Module" },
   ];
 
   return (
@@ -29,7 +29,7 @@ export default function ProductGallery() {
         className="relative z-10 text-center mb-16"
       >
         <h2 className="text-4xl md:text-5xl font-extrabold text-yellow-500 mb-4">
-          Our Projects
+          Our Product
         </h2>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
           A closer look at the innovation behind{" "}
@@ -50,7 +50,7 @@ export default function ProductGallery() {
             transition: { staggerChildren: 0.2 },
           },
         }}
-        className="relative z-10 grid sm:grid-cols-2 md:grid-cols-3 gap-10"
+        className="relative z-10 flex justify-center gap-10"
       >
         {products.map((product, idx) => (
           <motion.div
@@ -69,7 +69,7 @@ export default function ProductGallery() {
               y: -6,
               boxShadow: "0 15px 40px rgba(234,179,8,0.2)",
             }}
-            className="relative group rounded-3xl overflow-hidden border border-gray-800 hover:border-yellow-500/40 transition-all duration-500 bg-gray-900/60 backdrop-blur-md"
+            className="relative max-w-[300px] group rounded-3xl overflow-hidden border border-gray-800 hover:border-yellow-500/40 transition-all duration-500 bg-gray-900/60 backdrop-blur-md"
           >
             {/* Product Image */}
             <img

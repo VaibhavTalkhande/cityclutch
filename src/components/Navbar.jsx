@@ -83,7 +83,7 @@ export default function Navbar() {
             )}
           </div>
 
-          <a href="#projects" className="hover:text-yellow-400 transition">Our Projects</a>
+          <a href="#projects" className="hover:text-yellow-400 transition">Our Product</a>
           <a href="#installation" className="hover:text-yellow-400 transition">Installation</a>
           <a href="#contact" className="hover:text-yellow-400 transition">Contact</a>
         </div>

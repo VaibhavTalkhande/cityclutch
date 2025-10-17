@@ -47,7 +47,7 @@ const Footer = () => {
                 <Mail className="w-4 h-4 text-yellow-500" /> info@4telsautomation.com
               </li>
               <li className="flex items-center justify-center md:justify-start gap-2">
-                <Phone className="w-4 h-4 text-yellow-500" /> +91 98765 43210
+                <Phone className="w-4 h-4 text-yellow-500" /> +91 7058003780
               </li>
               <li className="flex items-center justify-center md:justify-start gap-2">
                 <MapPin className="w-4 h-4 text-yellow-500" /> Pune, Maharashtra, India
