@@ -6,7 +6,7 @@ export default function InstallationDiagram() {
   return (
     <section
       id="installation"
-      className="relative overflow-hidden bg-black text-gray-300 py-24 px-6 sm:px-10 md:px-20"
+      className="relative overflow-hidden bg-black pt-10 text-gray-300 px-6 sm:px-10 md:px-20"
     >
       {/* ✨ Golden lighting background */}
       <div className="absolute inset-0 bg-gradient-to-b from-yellow-900/10 via-black to-black"></div>

@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative flex flex-col md:flex-row items-center justify-center max-w-7xl mx-auto px-6 pt-28 pb-20 overflow-hidden"
+      className="relative flex flex-col-reverse  md:flex-row items-center justify-center max-w-7xl mx-auto px-6 pt-28 pb-20 overflow-hidden"
     >
       {/* ✨ Dynamic Gold Glow Background */}
       <motion.div
@@ -60,9 +60,14 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="text-4xl md:text-6xl font-extrabold leading-tight text-yellow-500 mb-6"
+          className="text-4xl md:text-6xl mt-5 font-extrabold text-yellow-500 mb-6"
         >
-          CityClutch <br className="hidden md:block" /> iMT Conversion Device
+          <span className="text-white">CITY</span>
+          <span className="text-cyan-400">CLUTCH </span>
+          <br className="hidden md:block" />
+          <p className="sm:text-4xl md:text-2xl text-2xl font-semibold">
+            Conversion Kit IMT (Intelligent Manual Transmission)
+          </p>
         </motion.h1>
 
         {/* Subtext */}

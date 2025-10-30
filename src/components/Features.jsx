@@ -44,7 +44,7 @@ export default function Features() {
   return (
     <section
       id="features"
-      className="relative bg-black text-gray-300 py-24 px-6 sm:px-10 md:px-20 overflow-hidden"
+      className="relative bg-black text-gray-300 pt-10 px-6 sm:px-10 md:px-20 overflow-hidden"
     >
       {/* Background Lighting */}
       <div className="absolute inset-0 bg-gradient-to-b from-yellow-900/10 via-black to-black"></div>
